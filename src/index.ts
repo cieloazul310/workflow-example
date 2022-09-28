@@ -1,5 +1,5 @@
-function hoge(a: number, b: number) {
+function add(a: number, b: number) {
   return a + b;
 }
 
-export default hoge;
+export default add;
