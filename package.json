@@ -1,5 +1,7 @@
 {
   "name": "workflow-example",
+  "version": "0.0.1",
+  "private": true,
   "packageManager": "yarn@3.2.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,6 +12,8 @@
     "lib"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "eslint": "^8.24.0",
@@ -35,6 +39,21 @@
     "./src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --parser typescript --write"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ],
+    "branches": [
+      "main"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
