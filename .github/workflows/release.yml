@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - "release/**"
 jobs:
   release:
     name: Release
@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          cache: yarn
       - name: Install dependencies
         run: yarn install --immutable
       - name: Release
