@@ -2,7 +2,12 @@ name: Release
 on:
   push:
     branches:
-      - "release/**"
+      - main
+      - next
+      - next-major
+      - beta
+      - alpha
+      - "+([0-9])?(.{+([0-9]),x}).x"
 jobs:
   release:
     name: Release
