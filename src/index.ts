@@ -5,5 +5,5 @@ function add(...n: number[]) {
 export default add;
 
 export function multiply(...n: number[]) {
-  return n.reduce((accum, curr) => accum * curr, 0);
+  return n.reduce((accum, curr) => accum * curr, 1);
 }
