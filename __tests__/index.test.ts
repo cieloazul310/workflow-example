@@ -1,4 +1,4 @@
-import { add, multiply } from '../src/index';
+import { add, multiply, divide } from '../src/index';
 
 describe('add', () => {
   it('0 value', () => {
@@ -33,5 +33,23 @@ describe('multiply', () => {
   });
   it('4 values', () => {
     expect(multiply(1, 2, 3, 4)).toBe(24);
+  });
+});
+
+describe('divide', () => {
+  it('0 value', () => {
+    expect(divide()).toBe(1);
+  });
+  it('1 value', () => {
+    expect(divide(1)).toBe(1);
+  });
+  it('2 values', () => {
+    expect(divide(1, 2)).toBe(1 / 2);
+  });
+  it('3 values', () => {
+    expect(divide(1, 2, 3)).toBe(1 / 6);
+  });
+  it('4 values', () => {
+    expect(divide(1, 2, 3, 4)).toBe(1 / 24);
   });
 });
