@@ -50,6 +50,10 @@
     "./src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --parser typescript --write"
+    ],
+    "./__tests__/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser typescript --write"
     ]
   },
   "commitlint": {
