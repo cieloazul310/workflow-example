@@ -8,6 +8,10 @@ on:
       - beta
       - alpha
       - "+([0-9])?(.{+([0-9]),x}).x"
+    paths:
+      - src/**
+      - package.json
+
 jobs:
   release:
     name: Release
