@@ -4,6 +4,8 @@ on:
     types: [opened, synchronize]
     paths:
       - src/**
+      - jest.config.js
+      - .github/workflows/**
 
 jobs:
   test:
