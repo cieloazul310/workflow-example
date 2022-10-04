@@ -30,7 +30,7 @@ jobs:
           cache: yarn
       
       - name: Setup yarn 3
-        run: yarn set version 3.2.0
+        run: yarn set version 3.2.0 --only-if-needed
 
       - name: Install dependencies
         run: yarn install --immutable
