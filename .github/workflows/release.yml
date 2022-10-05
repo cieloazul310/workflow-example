@@ -30,8 +30,8 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
-        # run: yarn install --immutable
+        # run: yarn --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Release
         env:

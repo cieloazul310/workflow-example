@@ -13,8 +13,11 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Install with yarn
-        run: yarn
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: yarn
       
       - name: Yarn version
         run: yarn --version
