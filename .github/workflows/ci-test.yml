@@ -1,8 +1,9 @@
-name: Test
+name: CI Test
 on:
   push:
     paths-ignore:
       - "src/**"
+      - "__tests__/**"
   
   pull_request:
     types: [opened, synchronize]

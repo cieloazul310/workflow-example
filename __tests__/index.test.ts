@@ -1,4 +1,4 @@
-import { add, multiply, divide } from '../src/index';
+import { add, multiply, divide } from '../src/calc';
 
 describe('add', () => {
   it('0 value', () => {
